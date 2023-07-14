@@ -1,4 +1,5 @@
 class CreateAppInformations < ActiveRecord::Migration[7.0]
+  # rubocop:disable Metrics/MethodLength
   def change
     create_table :app_informations do |t|
       t.string :fullname
@@ -15,5 +16,6 @@ class CreateAppInformations < ActiveRecord::Migration[7.0]
 
       t.timestamps
     end
+    # rubocop:enable Metrics/MethodLength
   end
 end
