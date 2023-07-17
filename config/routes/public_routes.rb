@@ -6,5 +6,6 @@ namespace :api do
     resources :admins, only: :index
     resources :app_informations, only: :index
     resources :projects, only: :index
+    resources :admins, only: :create
   end
 end
