@@ -2,12 +2,7 @@
 
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  namespace :api do
-    namespace :v1 do
-      resources :articles, only: :index
-      resources :admins, only: :index
-      resources :app_informations, only: :index
-      resources :projects, only: :index
-    end
-  end
+
+  draw :public_routes
+  draw :private_routes
 end

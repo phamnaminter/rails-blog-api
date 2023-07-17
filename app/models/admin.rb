@@ -12,6 +12,8 @@ class Admin < ApplicationRecord
 
   # rubocop:disable Style/MultilineBlockChain
   def generate_token
+    auth_token&.destroy!
+
     loop do
       new_token = SecureRandom.hex(TOKEN_LENGTH)
       break new_token unless AuthToken.exists?(token: new_token)
