@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Project Controller
-class Api::V1::ProjectsController < ApplicationController
+class Api::V1::ProjectsController < Api::V1::ApplicationControllerPublic
   def index
     @projects = Project.all
 

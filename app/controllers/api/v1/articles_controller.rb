@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Article Controller
-class Api::V1::ArticlesController < ApplicationController
+class Api::V1::ArticlesController < Api::V1::ApplicationControllerPublic
   def index
     @articles = Article.all
 

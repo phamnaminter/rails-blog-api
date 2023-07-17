@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # App Information Controller
-class Api::V1::AppInformationsController < ApplicationController
+class Api::V1::AppInformationsController < Api::V1::ApplicationControllerPublic
   def index
     # Load default app information
     @app_information = AppInformation.first
