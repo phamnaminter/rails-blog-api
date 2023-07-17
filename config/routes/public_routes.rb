@@ -3,9 +3,9 @@
 namespace :api do
   namespace :v1 do
     resources :articles, only: :index
-    resources :admins, only: :index
+    resources :admins, only: %i(index create)
     resources :app_informations, only: :index
     resources :projects, only: :index
-    resources :admins, only: :create
+    resources :sessions, only: :create
   end
 end
