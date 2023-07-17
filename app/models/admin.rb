@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 class Admin < ApplicationRecord
+  devise :database_authenticatable, :registerable,
+         :validatable
+
   has_one :auth_token
 
   TOKEN_LENGTH = 256
