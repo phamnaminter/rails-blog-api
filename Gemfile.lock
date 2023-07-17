@@ -82,6 +82,7 @@ GEM
     bcrypt (3.1.19)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
+    brakeman (5.4.1)
     builder (3.2.4)
     case_transform (0.2)
       activesupport
@@ -264,6 +265,7 @@ DEPENDENCIES
   active_interaction (~> 5.3)
   active_model_serializers
   bootsnap
+  brakeman
   debug
   devise
   image_processing
