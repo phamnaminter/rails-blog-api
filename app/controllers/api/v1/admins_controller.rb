@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Admin Controller
-class Api::V1::AdminsController < ApplicationController
+class Api::V1::AdminsController < Api::V1::ApplicationControllerPublic
   def index
     @admins = Admin.all
 
