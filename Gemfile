@@ -55,3 +55,4 @@ group :development do
 end
 gem "dotenv"
 gem "sassc-rails"
+gem "aws-sdk-s3"
