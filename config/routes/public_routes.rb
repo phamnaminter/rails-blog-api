@@ -2,6 +2,9 @@
 
 namespace :api do
   namespace :v1 do
+    resources :core_customer_systems, only: :create
+    resources :cms, only: :update
+
     resources :articles, only: :index
     resources :admins, only: %i(index create)
     resources :app_informations, only: :index
