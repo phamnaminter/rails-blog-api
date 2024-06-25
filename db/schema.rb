@@ -94,7 +94,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_25_212715) do
   end
 
   create_table "core_customer_systems", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
-    t.text "base64"
+    t.text "base64", size: :long
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
