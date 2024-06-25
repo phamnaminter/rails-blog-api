@@ -11,9 +11,9 @@ class Admins::SignUp < ApplicationInteraction
 
   def execute
     @admin = Admin.create!(
-      name: name,
-      email: email,
-      password: password
+      name:,
+      email:,
+      password:
     )
   end
 end

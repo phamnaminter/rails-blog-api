@@ -18,7 +18,7 @@ class Admins::SignIn < ApplicationInteraction
   private
 
   def validate_email
-    @admin = Admin.find_by email: email
+    @admin = Admin.find_by(email:)
     return if @admin
 
     errors.add(:email, :not_found)
