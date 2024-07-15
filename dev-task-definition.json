@@ -39,7 +39,17 @@
                     "name": "DATABASE_HOSTNAME",
                     "valueFrom": "arn:aws:ssm:us-west-2:005570540694:parameter/dev/database/hostname"
                 } 
-            ]
+            ],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/ecs/dev-task-definition",
+                    "awslogs-create-group": "true",
+                    "awslogs-region": "us-west-2",
+                    "awslogs-stream-prefix": "ecs"
+                },
+                "secretOptions": []
+            }
         }
     ],
     "family": "dev-task-definition",
