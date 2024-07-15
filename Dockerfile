@@ -21,5 +21,9 @@ COPY . .
 # Expose port 3000 for the Rails server
 EXPOSE 3000
 
-# Define the command to run the Rails server
-CMD ["rails", "s"]
+# Create a shell script for entrypoint
+RUN echo "#!/bin/bash \n bundle exec rails db:prepare \n bundle exec rails s" > /app/entrypoint.sh
+RUN chmod +x /app/entrypoint.sh
+
+# Set the entrypoint to run the shell script
+ENTRYPOINT ["/app/entrypoint.sh"]
