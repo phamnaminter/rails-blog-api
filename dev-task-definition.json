@@ -1,9 +1,8 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-west-2:005570540694:task-definition/dev-task-definition:2",
     "containerDefinitions": [
         {
             "name": "dev-container",
-            "image": "public.ecr.aws/nginx/nginx:stable-perl",
+            "image": "",
             "cpu": 256,
             "memory": 512,
             "portMappings": [
@@ -17,34 +16,40 @@
             "environment": [],
             "mountPoints": [],
             "volumesFrom": [],
-            "systemControls": []
+            "systemControls": [],
+            "secrets": [
+                {
+                    "name": "STORAGE_SERVICE",
+                    "value": "local"
+                },
+                {
+                    "name": "RAILS_APP_DATABASE_USER",
+                    "valueFrom": "arn:aws:ssm:us-west-2:005570540694:parameter/dev/database/user"
+                },
+                {
+                    "name": "RAILS_APP_DATABASE_PASSWORD",
+                    "valueFrom": "arn:aws:ssm:us-west-2:005570540694:parameter/dev/database/password"
+                },
+                {
+                    "name": "DATABASE_HOSTNAME",
+                    "valueFrom": "arn:aws:ssm:us-west-2:005570540694:parameter/dev/database/hostname"
+                },
+                {
+                    "name": "RAILS_APP_DATABASE_NAME",
+                    "value": "blog_db"
+                }   
+            ]
         }
     ],
     "family": "dev-task-definition",
     "executionRoleArn": "arn:aws:iam::005570540694:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 2,
     "volumes": [],
-    "status": "ACTIVE",
-    "requiresAttributes": [
-        {
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
-        },
-        {
-            "name": "ecs.capability.task-eni"
-        }
-    ],
     "placementConstraints": [],
-    "compatibilities": [
-        "EC2",
-        "FARGATE"
-    ],
     "requiresCompatibilities": [
         "FARGATE"
     ],
     "cpu": "256",
     "memory": "512",
-    "registeredAt": "2024-07-15T09:19:20.996Z",
-    "registeredBy": "arn:aws:iam::005570540694:user/nampt3121",
     "tags": []
 }
