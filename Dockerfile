@@ -22,7 +22,6 @@ COPY . .
 EXPOSE 3000
 
 # Create a shell script for entrypoint
-RUN echo "#!/bin/bash \n bundle exec rails db:prepare \n bundle exec rails s" > /app/entrypoint.sh
 RUN chmod +x /app/entrypoint.sh
 
 # Set the entrypoint to run the shell script
