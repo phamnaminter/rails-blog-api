@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cd app && bundle exec rails db:prepare && bundle exec rails s
+pwd && ls && bundle exec rails db:prepare && bundle exec rails s
