@@ -13,15 +13,20 @@
                 }
             ],
             "essential": true,
-            "environment": [],
-            "mountPoints": [],
-            "volumesFrom": [],
-            "systemControls": [],
-            "secrets": [
+            "environment": [
                 {
                     "name": "STORAGE_SERVICE",
                     "value": "local"
                 },
+                {
+                    "name": "RAILS_APP_DATABASE_NAME",
+                    "value": "blog_db"
+                }  
+            ],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "systemControls": [],
+            "secrets": [
                 {
                     "name": "RAILS_APP_DATABASE_USER",
                     "valueFrom": "arn:aws:ssm:us-west-2:005570540694:parameter/dev/database/user"
@@ -33,11 +38,7 @@
                 {
                     "name": "DATABASE_HOSTNAME",
                     "valueFrom": "arn:aws:ssm:us-west-2:005570540694:parameter/dev/database/hostname"
-                },
-                {
-                    "name": "RAILS_APP_DATABASE_NAME",
-                    "value": "blog_db"
-                }   
+                } 
             ]
         }
     ],
