@@ -29,7 +29,7 @@
             "secrets": [
                 {
                     "name": "RAILS_APP_DATABASE_USER",
-                    "valueFrom": "arn:aws:ssm:us-west-2:005570540694:parameter/dev/database/user"
+                    "valueFrom": "arn:aws:ssm:us-west-2:005570540694:parameter/dev/database/username"
                 },
                 {
                     "name": "RAILS_APP_DATABASE_PASSWORD",
