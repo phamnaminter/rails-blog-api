@@ -7,7 +7,7 @@ RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.lis
 RUN apt-get update && apt-get install -y --no-install-recommends nodejs yarn
 
 # Set the working directory in the container
-WORKDIR /
+WORKDIR /app
 
 # Copy the Gemfile and Gemfile.lock into the container
 COPY Gemfile Gemfile.lock ./
@@ -22,7 +22,7 @@ COPY . .
 EXPOSE 3000
 
 # Create a shell script for entrypoint
-RUN chmod +x /entrypoint.sh
+RUN chmod +x /app/entrypoint.sh
 
 # Set the entrypoint to run the shell script
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/app/entrypoint.sh"]
