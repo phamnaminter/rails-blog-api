@@ -4,17 +4,6 @@ on:
   push:
     branches:
       - main
-  workflow_run:
-    workflows: ["Brakeman", "RuboCop"]
-    types:
-      - completed
-env:
-  AWS_REGION: AWS_REGION
-  ECR_REPOSITORY: ECR_REPOSITORY
-  ECS_SERVICE: ECS_SERVICE
-  ECS_CLUSTER: ECS_CLUSTER
-  ECS_TASK_DEFINITION: ECS_TASK_DEFINITION
-  CONTAINER_NAME: CONTAINER_NAME
 
 jobs:
   deploy:
