@@ -2,7 +2,7 @@
     "containerDefinitions": [
         {
             "name": "dev-container",
-            "image": "",
+            "image": $REPOSITORY_URI:$IMAGE_TAG,
             "cpu": 256,
             "memory": 512,
             "portMappings": [
