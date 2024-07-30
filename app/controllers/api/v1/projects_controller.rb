@@ -5,6 +5,6 @@ class Api::V1::ProjectsController < Api::V1::ApplicationControllerPublic
   def index
     @projects = Project.all
 
-    render json: {version: 10}
+    render json: {version: 120}
   end
 end
